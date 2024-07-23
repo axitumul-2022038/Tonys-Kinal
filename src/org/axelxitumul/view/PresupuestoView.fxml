@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="348.0" prefWidth="803.0" style="-fx-background-color: #5e463d;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.axelxitumul.controller.PresupuestoController">
+   <children>
+      <AnchorPane prefHeight="348.0" prefWidth="200.0" style="-fx-background-color: #8c6c54;">
+         <children>
+            <VBox layoutX="10.0" layoutY="148.0" prefHeight="128.0" prefWidth="180.0">
+               <children>
+                  <Button fx:id="btnNuevoPresupuesto" mnemonicParsing="false" onAction="#nuevo" prefHeight="25.0" prefWidth="179.0" styleClass="button1" stylesheets="@../resource/TonysKinal.css" text="Nuevo">
+                     <graphic>
+                        <ImageView fx:id="imgNuevoPresupuesto" fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../image/nuevo.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="btnEliminarPresupuesto" mnemonicParsing="false" onAction="#eliminar" prefHeight="25.0" prefWidth="179.0" styleClass="button1" stylesheets="@../resource/TonysKinal.css" text="Eliminar">
+                     <graphic>
+                        <ImageView fx:id="imgEliminarPresupuesto" fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../image/eliminar.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="btnEditarPresupuesto" mnemonicParsing="false" onAction="#editar" prefHeight="25.0" prefWidth="179.0" styleClass="button1" stylesheets="@../resource/TonysKinal.css" text="Editar">
+                     <graphic>
+                        <ImageView fx:id="imgEditarPresupuesto" fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../image/editar.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="btnReportePresupuesto" mnemonicParsing="false" onAction="#reporte" prefHeight="25.0" prefWidth="179.0" styleClass="button1" stylesheets="@../resource/TonysKinal.css" text="Reporte">
+                     <graphic>
+                        <ImageView fx:id="imgReportePresupuesto" fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../image/reporte.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </VBox>
+            <ImageView fitHeight="77.0" fitWidth="81.0" layoutX="58.0" layoutY="53.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/presupuesto.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="21.0" layoutY="14.0" prefHeight="35.0" prefWidth="152.0" text="Presupuestos" textFill="WHITE">
+               <font>
+                  <Font name="Ink Free" size="26.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="40.0" fitWidth="37.0" layoutX="78.0" layoutY="311.0" onMouseClicked="#ventanaEmpresa" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/regresarempresa.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <Pane layoutX="200.0" prefHeight="173.0" prefWidth="200.0" styleClass="panel4" stylesheets="@../resource/TonysKinal.css" />
+      <Pane layoutX="400.0" layoutY="173.0" prefHeight="174.0" prefWidth="200.0" styleClass="panel4" stylesheets="@../resource/TonysKinal.css" />
+      <Pane layoutX="600.0" layoutY="-1.0" prefHeight="174.0" prefWidth="200.0" styleClass="panel4" stylesheets="@../resource/TonysKinal.css">
+         <children>
+            <ImageView fitHeight="48.0" fitWidth="50.0" layoutX="152.0" onMouseClicked="#menuPrincipal" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/casa.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <TableView fx:id="tblPresupuestos" layoutX="252.0" layoutY="134.0" onKeyReleased="#seleccionarElemento" onMouseClicked="#seleccionarElemento" prefHeight="200.0" prefWidth="509.0" styleClass="table-column" stylesheets="@../resource/TonysKinal.css">
+        <columns>
+          <TableColumn fx:id="colCodigoPresupuesto" prefWidth="108.0" text="Cod. Presupuesto" />
+          <TableColumn fx:id="colFechaDeSolicitud" prefWidth="122.0" text="Fecha de solicitud" />
+            <TableColumn fx:id="colCantidadDePresupuesto" prefWidth="178.0" text="Cantidad de Presupuesto" />
+            <TableColumn fx:id="colCodigoEmpresa" prefWidth="100.0" text="Codigo Empresa" />
+        </columns>
+      </TableView>
+      <GridPane fx:id="grpFecha" layoutX="201.0" layoutY="6.0" prefHeight="77.0" prefWidth="554.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="196.0" minWidth="10.0" prefWidth="166.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="165.0" minWidth="10.0" prefWidth="152.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="133.0" minWidth="10.0" prefWidth="132.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label styleClass="letras" stylesheets="@../resource/TonysKinal.css" text="Codigo Presupuesto">
+               <font>
+                  <Font size="13.0" />
+               </font>
+               <padding>
+                  <Insets left="10.0" right="10.0" />
+               </padding>
+            </Label>
+            <Label styleClass="letras" stylesheets="@../resource/TonysKinal.css" text="Fecha de Solicitud" GridPane.columnIndex="2">
+               <font>
+                  <Font size="13.0" />
+               </font>
+               <padding>
+                  <Insets left="10.0" right="10.0" />
+               </padding>
+            </Label>
+            <Label prefHeight="17.0" prefWidth="165.0" styleClass="letras" stylesheets="@../resource/TonysKinal.css" text="Cantidad de Presupuesto " GridPane.rowIndex="1">
+               <font>
+                  <Font size="13.0" />
+               </font>
+               <padding>
+                  <Insets left="10.0" right="10.0" />
+               </padding>
+            </Label>
+            <Label styleClass="letras" stylesheets="@../resource/TonysKinal.css" text="Codigo Empresa" GridPane.columnIndex="2" GridPane.rowIndex="1">
+               <font>
+                  <Font size="13.0" />
+               </font>
+               <padding>
+                  <Insets left="10.0" right="10.0" />
+               </padding>
+            </Label>
+            <TextField fx:id="txtCodigoPresupuesto" editable="false" GridPane.columnIndex="1">
+               <GridPane.margin>
+                  <Insets left="10.0" right="10.0" />
+               </GridPane.margin>
+            </TextField>
+            <TextField fx:id="txtCantidadDePresupuesto" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets left="10.0" right="10.0" />
+               </GridPane.margin>
+            </TextField>
+            <ComboBox fx:id="cmbCodigoEmpresa" disable="true" prefWidth="150.0" GridPane.columnIndex="3" GridPane.rowIndex="1">
+               <padding>
+                  <Insets left="10.0" right="10.0" />
+               </padding>
+            </ComboBox>
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>

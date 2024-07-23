@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.axelxitumul.controller.UsuarioController">
+   <children>
+      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0" style="-fx-background-color: #5e463d;">
+         <children>
+            <Pane layoutX="258.0" layoutY="174.0" prefHeight="174.0" prefWidth="222.0" style="-fx-background-color: #c39b64;" styleClass="panel4" stylesheets="@../resource/TonysKinal.css">
+               <children>
+                  <Label layoutX="119.0" layoutY="13.0" styleClass="letras" stylesheets="@../resource/TonysKinal.css" text="NOMBRE">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="117.0" layoutY="57.0" styleClass="letras" stylesheets="@../resource/TonysKinal.css" text="APELLIDO">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="119.0" layoutY="97.0" styleClass="letras" stylesheets="@../resource/TonysKinal.css" text="USUARIO">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="119.0" layoutY="143.0" styleClass="letras" stylesheets="@../resource/TonysKinal.css" text="CONTRASEÑA">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane layoutX="480.0" layoutY="348.0" prefHeight="153.0" prefWidth="222.0" style="-fx-background-color: #c39b64;" styleClass="panel4" stylesheets="@../resource/TonysKinal.css" />
+            <Pane prefHeight="500.0" prefWidth="258.0" style="-fx-background-color: #8c6c54;">
+               <children>
+                  <ImageView fitHeight="106.0" fitWidth="104.0" layoutX="77.0" layoutY="96.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/usuario.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="85.0" layoutY="53.0" prefHeight="35.0" prefWidth="89.0" text="Usuario" textFill="WHITE">
+                     <font>
+                        <Font name="Ink Free" size="26.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="btnNuevo" layoutX="37.0" layoutY="268.0" mnemonicParsing="false" onAction="#nuevo" prefHeight="25.0" prefWidth="179.0" styleClass="button1" stylesheets="@../resource/TonysKinal.css" text="NUEVO">
+                     <graphic>
+                        <ImageView fx:id="imgNuevoUsuario" fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../image/nuevo.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="btnEliminar" layoutX="37.0" layoutY="315.0" mnemonicParsing="false" onAction="#eliminar" prefHeight="25.0" prefWidth="179.0" styleClass="button1" stylesheets="@../resource/TonysKinal.css" text="CANCELAR">
+                     <graphic>
+                        <ImageView fx:id="imgEliminarUsuario" fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../image/eliminar.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </Pane>
+            <Pane layoutX="480.0" prefHeight="174.0" prefWidth="222.0" style="-fx-background-color: #c39b64;" styleClass="panel4" stylesheets="@../resource/TonysKinal.css">
+               <children>
+                  <ImageView fitHeight="104.0" fitWidth="95.0" layoutX="127.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/MenuLogo.png" />
+                     </image>
+                  </ImageView>
+                  <TextField fx:id="txtCodigoUsuario" editable="false" layoutX="14.0" layoutY="148.0" prefHeight="25.0" prefWidth="188.0" style="-fx-background-color: #c39b64; -fx-border-color: #5e463d;" styleClass="letras" stylesheets="@../resource/TonysKinal.css" />
+               </children>
+            </Pane>
+            <TextField fx:id="txtApellidoUsuario" editable="false" layoutX="495.0" layoutY="227.0" prefHeight="25.0" prefWidth="188.0" style="-fx-background-color: #5e463d; -fx-border-color: #c39b64;" styleClass="letras" stylesheets="@../resource/TonysKinal.css" />
+            <TextField fx:id="txtUsuario" editable="false" layoutX="495.0" layoutY="268.0" prefHeight="25.0" prefWidth="188.0" style="-fx-background-color: #5e463d; -fx-border-color: #c39b64;" styleClass="letras" stylesheets="@../resource/TonysKinal.css" />
+            <TextField fx:id="txtContrasenia" editable="false" layoutX="495.0" layoutY="310.0" prefHeight="25.0" prefWidth="188.0" style="-fx-background-color: #5e463d; -fx-border-color: #c39b64;" styleClass="letras" stylesheets="@../resource/TonysKinal.css" />
+            <TextField fx:id="txtNombreUsuario" editable="false" layoutX="495.0" layoutY="189.0" prefHeight="25.0" prefWidth="188.0" style="-fx-background-color: #5e463d; -fx-border-color: #c39b64;" styleClass="letras" stylesheets="@../resource/TonysKinal.css" />
+            <Label layoutX="379.0" layoutY="157.0" styleClass="letras" stylesheets="@../resource/TonysKinal.css" text="CODIGO USUARIO">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

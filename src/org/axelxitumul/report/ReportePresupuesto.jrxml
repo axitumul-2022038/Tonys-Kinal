@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ReportePresupuesto" language="groovy" pageWidth="612" pageHeight="792" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="dbef00ce-66cd-4ff1-ba68-a932797ed8f8">
+	<property name="ireport.zoom" value="1.0000000000000009"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="codEmpresa" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["C:\\Users\\Informatica\\Desktop\\TonysKinal\\src\\org\\axelxitumul\\report\\"]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[select * from Empresas E Inner Join Servicios S on
+  E.codigoEmpresa = S.codigoEmpresa where E.codigoEmpresa = $P{codEmpresa}]]>
+	</queryString>
+	<field name="codigoEmpresa" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nombreEmpresa" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="direccion" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="telefono" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="codigoServicio" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="fechaServicio" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="tipoDeServicio" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="horaDeServicio" class="java.sql.Time">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="lugarServicio" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="telefonoContacto" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band height="752" splitType="Stretch">
+			<rectangle>
+				<reportElement x="3" y="0" width="569" height="750" forecolor="#C39B64" backcolor="#C39B64" uuid="552b4b75-ef42-4110-a2a6-068ddc74d792"/>
+			</rectangle>
+			<rectangle radius="0">
+				<reportElement mode="Opaque" x="143" y="286" width="146" height="142" forecolor="#C39B64" backcolor="#B48C61" uuid="3a1f936a-4f3c-43fe-93e9-64a6de3782e4"/>
+			</rectangle>
+			<rectangle radius="0">
+				<reportElement mode="Opaque" x="289" y="144" width="137" height="142" forecolor="#C39B64" backcolor="#B48C61" uuid="b383b196-902b-4b0f-8e04-4b6048ccbe7d"/>
+			</rectangle>
+			<rectangle radius="0">
+				<reportElement mode="Opaque" x="289" y="428" width="137" height="142" forecolor="#C39B64" backcolor="#B48C61" uuid="3e8f4793-3c42-45ef-84f2-1c9acb29d34b"/>
+			</rectangle>
+			<rectangle radius="0">
+				<reportElement mode="Opaque" x="426" y="570" width="146" height="142" forecolor="#C39B64" backcolor="#B48C61" uuid="e87d88dc-8e83-4585-916c-180478e03aad"/>
+			</rectangle>
+			<rectangle radius="0">
+				<reportElement mode="Opaque" x="426" y="286" width="146" height="142" forecolor="#C39B64" backcolor="#B48C61" uuid="437a46f3-11e4-472d-8dba-44bb2ec08374"/>
+			</rectangle>
+			<rectangle radius="0">
+				<reportElement mode="Opaque" x="426" y="2" width="146" height="142" forecolor="#C39B64" backcolor="#B48C61" uuid="58760440-edb1-4a72-9fb2-a6db910dd553"/>
+			</rectangle>
+			<rectangle radius="0">
+				<reportElement mode="Opaque" x="3" y="428" width="146" height="142" forecolor="#C39B64" backcolor="#B48C61" uuid="0aa0d8f2-1cb7-4e38-98ca-c4d5593bfbc8"/>
+			</rectangle>
+			<rectangle radius="0">
+				<reportElement mode="Opaque" x="143" y="570" width="146" height="142" forecolor="#C39B64" backcolor="#B48C61" uuid="3b913bee-56a5-46b3-8b45-8b65b18a656f"/>
+			</rectangle>
+			<rectangle radius="0">
+				<reportElement mode="Opaque" x="143" y="2" width="146" height="142" forecolor="#C39B64" backcolor="#B48C61" uuid="81dcb864-07ef-4163-9b79-02ab191ffa68"/>
+			</rectangle>
+			<rectangle radius="0">
+				<reportElement mode="Opaque" x="3" y="144" width="146" height="142" forecolor="#C39B64" backcolor="#B48C61" uuid="2bc95292-2981-45cf-987d-8f41309e4bb4"/>
+			</rectangle>
+		</band>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<image>
+				<reportElement x="1" y="0" width="122" height="79" uuid="6dd1aec8-8900-4701-b717-54efccf3d289"/>
+				<imageExpression><![CDATA["C:\\Users\\Informatica\\Desktop\\TonysKinal\\src\\org\\axelxitumul\\image\\MenuLogo.png"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="217" splitType="Stretch">
+			<textField>
+				<reportElement x="192" y="0" width="146" height="20" uuid="a4142162-c8aa-4c56-a39a-abe7ef67adf5"/>
+				<textElement>
+					<font fontName="Berlin Sans FB" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nombreEmpresa}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="192" y="45" width="339" height="20" uuid="f72dc2ea-66e3-4779-b635-fe62afe7af50"/>
+				<textElement>
+					<font fontName="Berlin Sans FB" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{direccion}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="458" y="0" width="114" height="20" uuid="48212345-1f07-41a6-b312-ee43e4414e54"/>
+				<textElement>
+					<font fontName="Berlin Sans FB" size="14" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{telefono}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="1" y="0" width="180" height="20" uuid="89726342-26c7-4ac6-a2e5-d3e18d8d03ad"/>
+				<textElement>
+					<font fontName="Bell MT" size="16"/>
+				</textElement>
+				<text><![CDATA[Nombre de la Empresa]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="372" y="0" width="71" height="20" uuid="d499c0e0-301c-43af-b2ef-9b3295770320"/>
+				<textElement>
+					<font fontName="Bell MT" size="15"/>
+				</textElement>
+				<text><![CDATA[Telefono]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="105" y="45" width="76" height="20" uuid="67679a5c-4bfa-4b2c-a505-2530424eb13e"/>
+				<textElement>
+					<font fontName="Bell MT" size="16"/>
+				</textElement>
+				<text><![CDATA[Dirección]]></text>
+			</staticText>
+			<subreport>
+				<reportElement x="46" y="87" width="200" height="100" uuid="2a224a5f-b7f3-484d-abf8-1303150b0008"/>
+				<subreportParameter name="codEmpresa">
+					<subreportParameterExpression><![CDATA[$P{codEmpresa}]]></subreportParameterExpression>
+				</subreportParameter>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "SubReportePresupuesto.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="30" splitType="Stretch">
+			<staticText>
+				<reportElement x="143" y="0" width="126" height="20" uuid="e30d009a-f07e-4e5a-991f-3a7e16210976"/>
+				<textElement>
+					<font fontName="Bell MT" size="16"/>
+				</textElement>
+				<text><![CDATA[Hora De Servicio]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="289" y="0" width="120" height="20" uuid="2d15d3d6-a785-4b98-a0b2-e6eaaf17da3a"/>
+				<textElement>
+					<font fontName="Bell MT" size="16"/>
+				</textElement>
+				<text><![CDATA[Lugar Servicio]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="426" y="0" width="139" height="20" uuid="869aa04a-f018-41ea-a7b4-0ae638111fff"/>
+				<textElement>
+					<font fontName="Bell MT" size="16"/>
+				</textElement>
+				<text><![CDATA[Telefono Contacto]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1" y="0" width="132" height="20" uuid="5d2ea610-5065-4591-a8d7-548af3d6622e"/>
+				<textElement>
+					<font fontName="Bell MT" size="16"/>
+				</textElement>
+				<text><![CDATA[Fecha Servicio]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="39" splitType="Stretch">
+			<textField>
+				<reportElement x="143" y="0" width="121" height="20" uuid="a001f176-ec67-42aa-bc4a-82e841945ee9"/>
+				<textElement>
+					<font fontName="Berlin Sans FB"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{horaDeServicio}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="289" y="0" width="125" height="20" uuid="636d4c13-3885-4f94-8d82-d003f3936ee6"/>
+				<textElement>
+					<font fontName="Berlin Sans FB"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{lugarServicio}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="426" y="0" width="105" height="20" uuid="88908a63-9822-485f-955e-2857f3f15918"/>
+				<textElement>
+					<font fontName="Berlin Sans FB"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{telefonoContacto}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="1" y="0" width="126" height="20" uuid="eea001ed-6011-44bc-b882-ab9d8583b9e4"/>
+				<textElement>
+					<font fontName="Berlin Sans FB"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{fechaServicio}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="3" y="25" width="562" height="1" uuid="28321162-947a-4925-b768-deb8d3fe5b14"/>
+				<graphicElement>
+					<pen lineStyle="Dashed"/>
+				</graphicElement>
+			</line>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

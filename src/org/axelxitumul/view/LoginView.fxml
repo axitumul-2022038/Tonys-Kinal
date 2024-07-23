@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0" style="-fx-background-color: #5e463d;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.axelxitumul.controller.LoginController">
+   <children>
+      <Pane layoutX="258.0" layoutY="174.0" prefHeight="174.0" prefWidth="222.0" style="-fx-background-color: #c39b64;" styleClass="panel4" stylesheets="@../resource/TonysKinal.css">
+         <children>
+            <ImageView fitHeight="55.0" fitWidth="104.0" layoutX="105.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/user.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="55.0" fitWidth="115.0" layoutX="111.0" layoutY="105.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/contrasenia.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Pane layoutX="480.0" layoutY="348.0" prefHeight="153.0" prefWidth="222.0" style="-fx-background-color: #c39b64;" styleClass="panel4" stylesheets="@../resource/TonysKinal.css">
+         <children>
+            <Hyperlink layoutX="-57.0" layoutY="48.0" onAction="#ventanaUsuario" style="-fx-text-fill: #060504; -fx-border-color: #060504;" text="Crea Una Nueva Cuenta Aqui">
+               <font>
+                  <Font name="Berlin Sans FB" size="15.0" />
+               </font>
+            </Hyperlink>
+         </children></Pane>
+      <Pane prefHeight="500.0" prefWidth="258.0" style="-fx-background-color: #8c6c54;">
+         <children>
+            <ImageView fitHeight="106.0" fitWidth="104.0" layoutX="77.0" layoutY="96.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/login.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="51.0" layoutY="52.0" prefHeight="35.0" prefWidth="156.0" text="Iniciar Sesion" textFill="WHITE">
+               <font>
+                  <Font name="Ink Free" size="26.0" />
+               </font>
+            </Label>
+            <Button fx:id="btnIniciarSesion" layoutX="40.0" layoutY="250.0" mnemonicParsing="false" onAction="#sesion" prefHeight="25.0" prefWidth="179.0" styleClass="button1" stylesheets="@../resource/TonysKinal.css" text="INICIAR SESION" />
+            <Button fx:id="btnSalir" layoutX="40.0" layoutY="305.0" mnemonicParsing="false" onAction="#salir" prefHeight="25.0" prefWidth="179.0" styleClass="button1" stylesheets="@../resource/TonysKinal.css" text="SALIR" />
+         </children>
+      </Pane>
+      <Pane layoutX="480.0" prefHeight="174.0" prefWidth="222.0" style="-fx-background-color: #c39b64;" styleClass="panel4" stylesheets="@../resource/TonysKinal.css">
+         <children>
+            <ImageView fitHeight="104.0" fitWidth="104.0" layoutX="118.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/MenuLogo.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <TextField fx:id="txtUsuarioLogin" layoutX="431.0" layoutY="199.0" promptText="Usuario" style="-fx-background-color: transparent; -fx-border-color: #f1e680; -fx-border-width: 2px 2px 2px 2px;" styleClass="letras" stylesheets="@../resource/TonysKinal.css">
+         <font>
+            <Font name="Berlin Sans FB" size="13.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txtContrasenia" layoutX="431.0" layoutY="298.0" promptText="Constraseña" style="-fx-background-color: transparent; -fx-border-color: #f1e680; -fx-border-width: 2px 2px 2px 2px;" styleClass="letras" stylesheets="@../resource/TonysKinal.css">
+         <font>
+            <Font name="Berlin Sans FB" size="13.0" />
+         </font>
+      </TextField>
+      <Label layoutX="344.0" layoutY="400.0" prefHeight="25.0" prefWidth="78.0" styleClass="letras" stylesheets="@../resource/TonysKinal.css" text="Sin Cuenta?">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
